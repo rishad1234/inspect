@@ -1,10 +1,32 @@
 /* general */
+*:focus {
+  outline: none;
+}
 .section_space {
   margin-top: 40px;
 }
 body {
   margin: 0px !important;
   padding: 0px !important;
+}
+.cool-link {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width .3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width .3s;
 }
 /* index.html */
 
@@ -92,7 +114,10 @@ div.scrollmenu a {
 .content a:visited {
   color: black;
 }
-
+#cover_news a:link, #cover_news a:visited{
+  text-decoration: none;
+  color: black;
+}
 /* all news */
 .news_heading {
   display: inline-block;
@@ -116,6 +141,10 @@ div.scrollmenu a {
 .news_each_content p {
   font-size: 16px;
 }
+.news_each_heading a:link, .news_each_heading a:visited{
+  color: black;
+  text-decoration: none;
+}
 
 /* sponsored post */
 .sponsored_post {
@@ -133,7 +162,10 @@ div.scrollmenu a {
   font-size: 14px;
   color: #888888;
 }
-
+.sponsor_link_home:link, .sponsor_link_home:visited{
+  text-decoration: none;
+  color: #000;
+}
 /* footer */
 #particles-js {
   height: 400px;
@@ -225,4 +257,155 @@ div.scrollmenu a {
   cursor: pointer;
   -webkit-backface-visibility: hidden;
   transition: width 1.25s;
+}
+
+/* modal sign up */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  font-family: 'Playfair Display', serif !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/sign-up-bg-3.jpg");
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close_modal{
+  width: 100%;
+  float: right;
+}
+.close_modal i{
+  color: #fff !important;
+}
+
+/* sign in modal */
+#myModal_in .modal-content{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/sign-in-bg.jpg");
+}
+
+
+/* signup modal form */
+.sign_up input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 35px 10px 10px;
+  background: #fff;
+}
+.sign_up input:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.sign_up input::placeholder {
+  color: #1e1d1d !important;
+  opacity: 1;
+  display: block;
+}
+.sign_up input:hover::placeholder {
+  display: none;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+.sign_up .btn {
+  background: #000 !important;
+  color: #fff !important;
+}
+.sign_up .btn:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+.intro_signup{
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+.intro_signup h1{
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+.sign_up{
+  margin-top:40px;
+}
+.sign_up a:link, .sign_up a:visited{
+  color: #fff;
+  text-decoration: none;
+}
+.sign_up a:hover{
+  color: #000;
+}
+@media(max-width:576px){
+  .intro_signup h1{
+    font-size: 25px;
+  }
+  .intro_signup p{
+    font-size: 12px;
+  }
+  .modal-content{
+    height: 90%;
+    width: 90%;
+  }
+  .sign_up input {
+    padding: 5px 16px 5px 5px;
+  }
+  .sign_up{
+    margin-top:20px;
+  }
+}
+
+
+
+
+/* news details.html */
+.share_news_socials ul{
+  margin-top:10px;
+  padding-inline-start: 0px;
+}
+.share_news_socials ul li{
+  list-style-type: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-right:10px;
+}
+.share_news_socials li a:link, .share_news_socials li a:visited{
+  color: #000;
+}
+.news_cover_img img{
+  width:100%;
+  height:500px;
+}
+@media(max-width: 576px){
+  .news_cover_img img{
+    width:100%;
+    height:300px;
+  }
+}
+
+.main_news img, .similar_news img{
+  width: 100%;
+}
+.similar_news p{
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+}
+.similar_news p a:link, .similar_news p a:visited{
+  text-decoration: none;
+  color: black;
 }
