@@ -44,9 +44,9 @@
                     </span> -->
                     <span><a href="user_profile.html"><img class="userProfile mr-2" src="images/editor-3.jpg" alt=""></a></span>
                     <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
-                                href="<?php echo URLROOT; ?>SignIn">Sign in</a></button></span>
+                                href="<?php echo URLROOT; ?>pages/signIn">Sign in</a></button></span>
                     <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
-                                href="<?php echo URLROOT; ?>SignUp">Sign up</a></button></span>
+                                href="<?php echo URLROOT; ?>pages/signUp">Sign up</a></button></span>
 
                 </div>
             </div>
