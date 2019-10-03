@@ -85,7 +85,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
                     <?php
                     } ?>
-                    <a href="contact.html">CONTACT</a>
+                    <a href="<?php echo URLROOT; ?>ContactUs">CONTACT</a>
                 </div>
             </div>
         </div>
