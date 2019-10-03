@@ -73,15 +73,15 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="row">
             <div class="col-sm-12">
                 <div class="scrollmenu">
-                    <a href="index.html" class="active">HOME</a>
-                    <a href="about.html">ABOUT</a>
-                    <a href="get-hired.html">GET HIRED</a>
+                    <a href="<?php echo URLROOT; ?>" class="active">HOME</a>
+                    <a href="<?php echo URLROOT; ?>AboutUs">ABOUT</a>
                     <a href="river.html">RIVER</a>
                     <?php if(strcmp($_SESSION['logged_in'], 'yes') == 0){
                     ?>
 
                     <a href="events.html">EVENTS</a>
                     <a href="documentaries.html">DOCUMENTARIES</a>
+                    <a href="get-hired.html">GET HIRED</a>
 
                     <?php
                     } ?>
