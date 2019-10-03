@@ -1,6 +1,7 @@
 <?php
 
 require_once(APPROOT .'\models\Category.php');
+require_once(APPROOT .'\models\News.php');
 
 
   class Pages extends Controller {
@@ -14,6 +15,7 @@ require_once(APPROOT .'\models\Category.php');
       $data = [
         'title' => 'Inspect',
         'news_categories' => Category::getAllCategory(),
+        'top_news' => News::getTopNews(),
         'error' => ''
       ];
      

@@ -36,9 +36,28 @@
 
     <div id="cover_news" class="container section_space">
         <div class="row">
-            <div class="col-sm-6 news_left">
+            
+        <?php foreach($data['top_news'] as $news) {
+            ?>
+                <div class="col-sm-6 news_left">
+                    <a href="<?php echo URLROOT; ?>SingleNews/<?php echo $news['news_id'];?>">
+                        <img src="<?php echo URLROOT; ?>storage/images/<?php echo $news['image']; ?>" alt="">
+                        <br><br>
+                        <h3><?php echo $news['title']; ?></h3>
+                        <p><?php echo $news['created_at']; ?></p>
+                        <p class="content">
+                            <?php echo $news['excerpt']; ?><span><b><a
+                                        style="color:rgba(173, 39, 39, 0.897)" href="<?php echo URLROOT; ?>SingleNews/<?php echo $news['news_id'];?>"> Read
+                                        More</a></b></span>
+                        </p>
+                    </a>
+
+                </div>
+            <?php
+        }?>
+            <!-- <div class="col-sm-6 news_left">
                 <a href="news_details.html">
-                    <img src="<?php echo URLROOT; ?>images/cover-1.jpg" alt="">
+                    <img src="storage/images/cover-1.jpg" alt="">
                     <br><br>
                     <h3>Analysis of 150B+ browser-based US Google searches in Q1 2019: only 41.45% resulted in organic
                         clicks to non-Google sites, and 48.96% ended without a click </h3>
@@ -69,11 +88,9 @@
                         <span><b><a style="color:rgba(173, 39, 39, 0.897)" href="#"> Read More</a></b></span>
                     </p>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
-
-
 
     <!-- all news -->
     <div id="all_news" class="container section_space">
