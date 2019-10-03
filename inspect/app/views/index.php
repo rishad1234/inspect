@@ -10,106 +10,21 @@
 
     <div class="container section_space d-none d-md-block">
         <div class="row scrollmenu">
-            <div class="col-md-2">
-                <div class="eachCategories">
-                    <a href="each-category.html">OS talk</a>
 
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="eachCategories">
-                    <a href="each-category.html">
-                        Hardware
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="eachCategories">
-                    <a href="each-category.html">
-                        Software
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="eachCategories">
-                    <a href="each-category.html">
-                        Cloud Platform
-                    </a>
 
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="eachCategories">
-                    <a href="each-category.html">
-                        Skills
-                    </a>
-
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="eachCategories">
-                    <a href="each-category.html">
-                        Big 4
-                    </a>
-
-                </div>
-            </div>
+        <?php 
+            foreach($data['news_categories'] as $category){
+                ?>
+                    <div class="col-md-2">
+                        <div class="eachCategories">
+                            <a href=""><?php echo $category['category'] ?></a>
+                        </div>
+                    </div>
+                <?php
+            }
+        ?>
         </div>
     </div>
-
-    <div style="font-size:12px;" class="container section_space d-block d-sm-block d-md-none">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="eachCategories">
-                            <a href="each-category.html">
-                                Skills
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="eachCategories">
-                            <a href="each-category.html">
-                                Big 4
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="eachCategories">
-                            <a href="each-category.html">
-                                Cloud Platform
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mt-2">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="eachCategories">
-                            <a href="each-category.html">
-                                Hardware
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="eachCategories">
-                            <a href="each-category.html">
-                                Software
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="eachCategories">
-                            <a href="each-category.html">OS talk</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <div class="container section_space news_state">
         <div class="row">

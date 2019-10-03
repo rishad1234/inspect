@@ -1,12 +1,20 @@
 <?php
+
+require_once(APPROOT .'\models\Category.php');
+
+
   class Pages extends Controller {
     public function __construct(){
      
     }
     
     public function index(){
+
+
       $data = [
         'title' => 'Inspect',
+        'news_categories' => Category::getAllCategory(),
+        'error' => ''
       ];
      
       $this->view('index', $data);
