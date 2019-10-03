@@ -648,7 +648,7 @@ video {
   height:40px !important;
   width: 40px !important;
   border-radius: 100%;
-  display: none !important;
+  display: block;
 }
 
 

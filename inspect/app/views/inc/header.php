@@ -1,3 +1,9 @@
+<?php 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -27,7 +33,6 @@
 </head>
 
 <body>
-
     <!-- header -->
     <div id="header" class="container">
         <div class="row">
@@ -42,12 +47,22 @@
                             </div>
                         </form>
                     </span> -->
-                    <span><a href="user_profile.html"><img class="userProfile mr-2" src="images/editor-3.jpg" alt=""></a></span>
-                    <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
-                                href="<?php echo URLROOT; ?>pages/signIn">Sign in</a></button></span>
-                    <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
-                                href="<?php echo URLROOT; ?>pages/signUp">Sign up</a></button></span>
 
+                <?php 
+                    if(strcmp($_SESSION['logged_in'], 'yes') == 0) {
+                        ?>
+                            <span><a href="user_profile.html"><img class="userProfile mr-2" src="<?php echo URLROOT;?>images/editor-3.jpg" alt=""></a></span>
+                            <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
+                                        href="<?php echo URLROOT; ?>Logout">Log out</a></button></span>
+                        <?php
+                    }else{
+                        ?>
+                        <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
+                                    href="<?php echo URLROOT; ?>pages/signIn">Sign in</a></button></span>
+                        <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
+                                    href="<?php echo URLROOT; ?>pages/signUp">Sign up</a></button></span>
+                    <?php
+                    }?>
                 </div>
             </div>
         </div>
@@ -60,10 +75,16 @@
                 <div class="scrollmenu">
                     <a href="index.html" class="active">HOME</a>
                     <a href="about.html">ABOUT</a>
-                    <a href="events.html">EVENTS</a>
                     <a href="get-hired.html">GET HIRED</a>
                     <a href="river.html">RIVER</a>
+                    <?php if(strcmp($_SESSION['logged_in'], 'yes') == 0){
+                    ?>
+
+                    <a href="events.html">EVENTS</a>
                     <a href="documentaries.html">DOCUMENTARIES</a>
+
+                    <?php
+                    } ?>
                     <a href="contact.html">CONTACT</a>
                 </div>
             </div>

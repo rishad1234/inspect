@@ -11,15 +11,20 @@
                     Share your ideas, Read blogs, Follow what other companies <br> are are offering
                     and generate value for your own work place. <br> A wonderful place to gather knowledge.
                 </p>
-                <form class="signinform"> 
+                <form class="signinform" method="post" action="<?php echo URLROOT; ?>SignIn"> 
                     
                     <div class="form-group">
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                            placeholder="Enter email">
+                            placeholder="Enter email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required>
                     </div>
+                    <p><?php if($data['error']){
+                        echo $data['error'];
+                    }else{
+                        echo '';
+                    } ?></p>
                     <button type="submit" class="btn">Sign in</button>
                 </form>
             </div>

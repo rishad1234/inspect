@@ -23,6 +23,7 @@
     public function signIn(){
       $data = [
         'title' => 'Sign In',
+        'error' => ''
       ];
       $this->view('sign_in', $data);
     }

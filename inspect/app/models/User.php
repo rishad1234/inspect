@@ -23,4 +23,24 @@ class User{
 
         return $database->execute();
     }
+
+    public static function getSignInCount($email, $password){
+        $database = new Database;
+
+        $database->query('select * from users where email = :email and password = :password');
+        $database->bind('email', $email);
+        $database->bind('password', $password);
+
+        $database->execute();
+        return $database->rowCount();
+    }
+
+    public static function getSignInInfo($email, $password){
+        $database = new Database;
+
+        $database->query('select * from users where email = :email and password = :password');
+        $database->bind('email', $email);
+        $database->bind('password', $password);
+        return $database->resultSet();
+    }
 }
