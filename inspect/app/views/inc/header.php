@@ -49,6 +49,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     </span> -->
 
                 <?php 
+                if (isset($_SESSION['logged_in'])) {
                     if(strcmp($_SESSION['logged_in'], 'yes') == 0) {
                         ?>
                             <span><a href="user_profile.html"><img class="userProfile mr-2" src="<?php echo URLROOT;?>images/editor-3.jpg" alt=""></a></span>
@@ -62,7 +63,15 @@ if (session_status() == PHP_SESSION_NONE) {
                         <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
                                     href="<?php echo URLROOT; ?>pages/signUp">Sign up</a></button></span>
                     <?php
-                    }?>
+                    }
+                }else{
+                    ?>
+                        <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
+                                    href="<?php echo URLROOT; ?>pages/signIn">Sign in</a></button></span>
+                        <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
+                                    href="<?php echo URLROOT; ?>pages/signUp">Sign up</a></button></span>
+                <?php
+                }?>
                 </div>
             </div>
         </div>
@@ -76,15 +85,18 @@ if (session_status() == PHP_SESSION_NONE) {
                     <a href="<?php echo URLROOT; ?>" class="active">HOME</a>
                     <a href="<?php echo URLROOT; ?>AboutUs">ABOUT</a>
                     <a href="river.html">RIVER</a>
-                    <?php if(strcmp($_SESSION['logged_in'], 'yes') == 0){
+                    <?php
+                    if (isset($_SESSION['logged_in'])) {
+                        if(strcmp($_SESSION['logged_in'], 'yes') == 0){
                     ?>
 
                     <a href="events.html">EVENTS</a>
                     <a href="documentaries.html">DOCUMENTARIES</a>
                     <a href="get-hired.html">GET HIRED</a>
 
-                    <?php
-                    } ?>
+                        <?php
+                        } 
+                    }?>
                     <a href="<?php echo URLROOT; ?>ContactUs">CONTACT</a>
                 </div>
             </div>
