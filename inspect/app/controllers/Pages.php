@@ -16,6 +16,8 @@ require_once(APPROOT .'\models\News.php');
         'title' => 'Inspect',
         'news_categories' => Category::getAllCategory(),
         'top_news' => News::getTopNews(),
+        'sponsored_news'=> News::getSponsoredNews(),
+        'current_news' => News::getCurrentNews(),
         'error' => ''
       ];
      

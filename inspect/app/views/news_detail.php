@@ -18,7 +18,7 @@
                 </div>
                 <br><br>
                 <div class="news_cover_img">
-                    <img src="<?php echo URLROOT ?>storage/images/<?php echo $data['news']['image']; ?>" alt="">
+                    <img src="<?php echo URLROOT; ?>storage/images/<?php echo $data['news']['image']; ?>" alt="">
                     <br>
                 </div>
                 <br>
