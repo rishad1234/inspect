@@ -10,9 +10,13 @@ require_once(APPROOT .'\models\News.php');
     }
     
     public function index($param){
+      $news = News::getSingleNews($param);
         $data = [
             'title'=> 'News',
-            'news' => News::getSingleNews($param)
+            'news' => $news,
+            'sponsored_news' => News::getSponsoredNews(),
+            'similar_news' => News::getSimilarNewsByCategory($news['category_id'], $news['news_id']),
+            'error'=> ''
         ];
         return $this->view('news_detail', $data);
     }

@@ -33,42 +33,20 @@
                     </h3>
                     <br><br>
                     <div class="row">
+                    <?php foreach($data['similar_news'] as $news){
+                    ?>
                         <div class="col-sm-4">
-                            <img src="images/news-2.jpg" alt="">
+                            <img src="<?php echo URLROOT; ?>storage/images/<?php echo $news['image']; ?>" alt="">
                             <br>
                             <p class="font-weight-bold">
-                                <a href="news_details.html">
-                                    DeepMind execs talk about the importance of interdisciplinary research and how AI
-                                    could
-                                    help
-                                    solve tough scientific problems, like predicting shapes of proteins
+                                <a href="<?php echo URLROOT; ?>SingleNews/<?php echo $news['news_id'];?>">
+                                    <?php echo $news['title']; ?>
                                 </a>
 
                             </p>
                         </div>
-                        <div class="col-sm-4">
-                            <img src="images/news-1.jpg" alt="">
-                            <br>
-                            <p class="font-weight-bold">
-                                <a href="news_details.html">
-                                    Source: the FTC's antitrust investigation into Facebook will focus on the company's
-                                    core
-                                    social networking business
-                                </a>
-
-                            </p>
-                        </div>
-                        <div class="col-sm-4">
-                            <img src="images/news-3.jpg" alt="">
-                            <br>
-                            <p class="font-weight-bold">
-                                <a href="news_details.html">
-                                    Synergy Research: enterprise SaaS revenue will hit $100B annual run rate in Q2, with
-                                    Microsoft, Salesforce, and Adobe accounting for nearly 40% of the market
-                                </a>
-
-                            </p>
-                        </div>
+                    <?php
+                    } ?>
                     </div>
 
                 </div>
@@ -80,74 +58,26 @@
                 <br><br>
                 <div class="sponsored_post">
 
+                <?php 
+                    foreach($data['sponsored_news'] as $news){
+                ?>
                     <div class="each_sponsor">
-                        <img src="images/logo-1.png" alt="">
+                        <img src="<?php echo URLROOT; ?>storage/images/<?php echo $news['image']; ?>" alt="">
                         <br><br>
-                        <a class="sponsor_link_home" href="news_details.html">
-                            <h5>Google Fi - a phone plan, by Google </h5>
+                        <a class="sponsor_link_home" href="<?php echo URLROOT; ?>SingleNews/<?php echo $news['news_id'];?>">
+                            <h5><?php echo $news['title']; ?></h5>
                         </a>
 
 
-                        <p>We felt that most phone plans just weren't made with you in mind. So that's why we built
-                            Google
-                            Fi with features that real people actually want. Click to learn more. <span><a
-                                    href="news_details.html">
+                        <p> <?php echo $news['excerpt']; ?> <span><a
+                                    href="<?php echo URLROOT; ?>SingleNews/<?php echo $news['news_id'];?>">
                                     More</a></span>
                         </p>
                         <hr>
                     </div>
-                    <!-- 2nds -->
-                    <div class="each_sponsor">
-                        <img src="images/logo-2.png" alt="">
-                        <br><br>
-                        <a class="sponsor_link_home" href="news_details.html">
-                            <h5>Adobe's After Effects adds Content-Aware Fill for videos, which can intelligently remove
-                                and
-                                replace objects in a scene </h5>
-                        </a>
-
-                        <p>We felt that most phone plans just weren't made with you in mind. So that's why we built
-                            Google
-                            Fi with features that real people actually want. Click to learn more. <span><a
-                                    href="news_details.html">
-                                    More</a></span>
-                        </p>
-                        <hr>
-                    </div>
-
-                    <!-- 3rd -->
-                    <div class="each_sponsor">
-                        <img src="images/logo-3.png" alt="">
-                        <br><br>
-                        <a class="sponsor_link_home" href="news_details.html">
-                            <h5>How Steve Jobs conceived the “bicycle for the mind” metaphor for the personal computer,
-                                which largely drove Apple's philosophy for decades</h5>
-                        </a>
-
-
-                        <p>“When we invented the personal computer, we created a new kind of bicycle...a new man-machine
-                            partnership...a new generation of entrepreneurs." <span><a href="news_details.html">
-                                    More</a></span>
-                        </p>
-                        <hr>
-                    </div>
-
-                    <!-- 4th -->
-                    <div class="each_sponsor">
-                        <img src="images/logo-4.png" alt="">
-                        <br><br>
-                        <a class="sponsor_link_home" href="news_details.html">
-                            <h5>Google Fi - a phone plan, by Google </h5>
-                        </a>
-
-                        <p>We felt that most phone plans just weren't made with you in mind. So that's why we built
-                            Google
-                            Fi with features that real people actually want. Click to learn more. <span><a
-                                    href="news_details.html">
-                                    More</a></span>
-                        </p>
-                        <hr>
-                    </div>
+                <?php
+                    }
+                ?>
                 </div>
             </div>
         </div>

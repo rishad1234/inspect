@@ -46,7 +46,16 @@ class News{
 
         $database->query('select * from news where sponsored = 0 and category_id = :category_id order by created_at desc limit 50 offset 2');
         $database->bind('category_id', $id);
-        
+
+        return $database->resultSet();
+    }
+    public static function getSimilarNewsByCategory($category_id, $news_id){
+        $database = new Database;
+
+        $database->query('select * from news where sponsored = 0 and category_id = :category_id and news_id != :news_id order by created_at desc limit 3');
+        $database->bind('category_id', $category_id);
+        $database->bind('news_id', $news_id);
+
         return $database->resultSet();
     }
 }
