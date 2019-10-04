@@ -31,4 +31,22 @@ class News{
 
         return $database->resultSet();
     }
+
+    public static function getTopNewsByCategory($id){
+        $database = new Database;
+
+        $database->query('select * from news where sponsored = 0 and category_id = :category_id order by created_at desc limit 2');
+        $database->bind('category_id', $id);
+
+        return $database->resultSet();
+    }
+
+    public static function getCurrentNewsByCategory($id){
+        $database = new Database;
+
+        $database->query('select * from news where sponsored = 0 and category_id = :category_id order by created_at desc limit 50 offset 2');
+        $database->bind('category_id', $id);
+        
+        return $database->resultSet();
+    }
 }

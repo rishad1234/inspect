@@ -6,8 +6,15 @@ class Category{
 
         $database->query('select * from news_categories');
 
-        $database->execute();
-
         return $database->resultSet();
+    }
+
+    public static function getSingleCategory($id){
+        $database = new Database;
+
+        $database->query('select * from news_categories where category_id = :category_id');
+        $database->bind('category_id', $id);
+
+        return $database->single();
     }
 }

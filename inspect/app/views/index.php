@@ -17,7 +17,7 @@
                 ?>
                     <div class="col-md-2">
                         <div class="eachCategories">
-                            <a href=""><?php echo $category['category'] ?></a>
+                            <a href="<?php echo URLROOT; ?>CategoryType/<?php echo $category['category_id']; ?>"><?php echo $category['category']; ?></a>
                         </div>
                     </div>
                 <?php
