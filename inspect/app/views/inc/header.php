@@ -83,7 +83,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="col-sm-12">
                 <div class="scrollmenu">
                     <a href="<?php echo URLROOT; ?>" class="active">HOME</a>
-                    <a href="<?php echo URLROOT; ?>AboutUs">ABOUT</a>
+                    <a href="<?php echo URLROOT; ?>aboutUs">ABOUT</a>
                     <a href="<?php echo URLROOT; ?>river">RIVER</a>
                     <?php
                     if (isset($_SESSION['logged_in'])) {
@@ -91,13 +91,13 @@ if (session_status() == PHP_SESSION_NONE) {
                     ?>
 
                     <a href="events.html">EVENTS</a>
-                    <a href="documentaries.html">DOCUMENTARIES</a>
+                    <a href="<?php echo URLROOT; ?>documentaries">DOCUMENTARIES</a>
                     <a href="get-hired.html">GET HIRED</a>
 
                         <?php
                         } 
                     }?>
-                    <a href="<?php echo URLROOT; ?>ContactUs">CONTACT</a>
+                    <a href="<?php echo URLROOT; ?>contactUs">CONTACT</a>
                 </div>
             </div>
         </div>
