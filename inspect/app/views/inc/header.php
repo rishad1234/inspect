@@ -92,7 +92,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
                     <a href="events.html">EVENTS</a>
                     <a href="<?php echo URLROOT; ?>documentaries">DOCUMENTARIES</a>
-                    <a href="get-hired.html">GET HIRED</a>
+                    <a href="<?php echo URLROOT; ?>getHired">GET HIRED</a>
 
                         <?php
                         } 
