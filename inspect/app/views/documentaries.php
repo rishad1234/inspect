@@ -16,7 +16,7 @@
 
                             <div class="col-md-6">
                                 <div class="card" style="width: 100%;">
-                                    <a href="doc_details.html">
+                                    <a href="<?php echo URLROOT; ?>SingleDocumentary/<?php echo $documentary['documentary_id'];?>">
                                         <img src="<?php echo URLROOT; ?>storage/images/<?php echo $documentary['thumbnail_image']; ?>" class="card-img-top" alt="...">
                                         <div class="image-overlay">
                                             <div class="watchnow">

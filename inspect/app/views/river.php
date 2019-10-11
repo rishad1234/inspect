@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="col-md-1 river-time"><?php echo date_format(new DateTime($news['created_at']), 'h:m A'); ?></div>
                             <div class="col-md-11">
-                                <li><a href="#"><?php echo $news['title']; ?> </a>
+                                <li><a href="<?php echo URLROOT; ?>SingleNews/<?php echo $news['news_id'];?>"><?php echo $news['title']; ?> </a>
                                 </li>
                             </div>
                         </div>

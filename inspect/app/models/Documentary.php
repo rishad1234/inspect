@@ -17,4 +17,13 @@ class Documentary{
 
         return $database->resultSet();
     }
+
+    public static function getSimillarDocumentaries($documentary_id){
+        $database = new Database;
+
+        $database->query('select * from documentaries where documentary_id != :documentary_id order by created_at desc limit 4');
+        $database->bind('documentary_id', $documentary_id);
+
+        return $database->resultSet();
+    }
 }
