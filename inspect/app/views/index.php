@@ -44,7 +44,7 @@
                         <img src="<?php echo URLROOT; ?>storage/images/<?php echo $news['image']; ?>" alt="">
                         <br><br>
                         <h3><?php echo $news['title']; ?></h3>
-                        <p><?php echo $news['created_at']; ?></p>
+                        <p><?php echo date_format(new DateTime($news['created_at']), 'jS F, Y'); ?></p>
                         <p class="content">
                             <?php echo $news['excerpt']; ?><span><b><a
                                         style="color:rgba(173, 39, 39, 0.897)" href="<?php echo URLROOT; ?>SingleNews/<?php echo $news['news_id'];?>"> Read
@@ -72,7 +72,7 @@
                 <div class="row news_each mt-4">
                     <div class="col-md-4 news_each_img">
                         <img src="<?php echo URLROOT; ?>storage/images/<?php echo $news['image']; ?>" alt="">
-                        <p><?php echo $news['created_at']; ?> </p>
+                        <p><?php echo date_format(new DateTime($news['created_at']), 'jS F, Y'); ?></p>
                     </div>
                     <div class="col-md-8 news_each_heading">
                         <a href="<?php echo URLROOT; ?>SingleNews/<?php echo $news['news_id'];?>">

@@ -15,10 +15,10 @@
                     </div>
                     <div class="card-body">
                         <p class="posiiton">
-                            <strong style="text-decoration: underline"> Position:</strong><?php echo $job['position'] ?>
+                            <strong style="text-decoration: underline"> Position:</strong><?php echo $job['position']; ?>
                         </p>
                         <p class="deadline">
-                            <strong style="text-decoration: underline"> Application Deadline:</strong> <?php echo $job['deadline']; ?>
+                            <strong style="text-decoration: underline"> Application Deadline:</strong> <?php echo date_format(new DateTime($job['deadline']), 'jS, F'); ?>
                         </p>
                         <p class="requirements-header">
                             <strong style="text-decoration: underline">Requirements:</strong>

@@ -7,7 +7,7 @@
                 </h1>
                 <div class="publishDateTime">
                     <span><i class="far fa-calendar-alt"></i></span>
-                    <span><?php echo $data['news']['created_at']; ?></span>
+                    <span><?php echo date_format(new DateTime($data['news']['created_at']), 'jS F, Y'); ?></span>
                 </div>
                 <div class="share_news_socials">
                     <ul>
