@@ -2,6 +2,7 @@
 
 require_once(APPROOT .'\helpers\CleanParams.php');
 require_once(APPROOT .'\models\Contact.php');
+require_once(APPROOT .'\models\News.php');
 
 
   class ContactUs extends Controller {
@@ -13,6 +14,7 @@ require_once(APPROOT .'\models\Contact.php');
       session_start();
       $data=[
         'title'=> 'Contact Us',
+        'sponsored_news'=> News::getSponsoredNews(),
         'error' => ''
       ];
       return $this->view('contact', $data);

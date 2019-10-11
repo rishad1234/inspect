@@ -37,7 +37,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <div id="header" class="container">
         <div class="row">
             <div class="col-sm-12">
-                <a href="index.html"><img src="<?php echo URLROOT; ?>images/Inspect-2.png" alt="logo"></a>
+                <a href="<?php echo URLROOT; ?>"><img src="<?php echo URLROOT; ?>images/Inspect-2.png" alt="logo"></a>
                 <div class="get_started">
                     <!-- <span class="d-none d-lg-inline-block">
                         <form class="search-form">
@@ -84,7 +84,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <div class="scrollmenu">
                     <a href="<?php echo URLROOT; ?>" class="active">HOME</a>
                     <a href="<?php echo URLROOT; ?>AboutUs">ABOUT</a>
-                    <a href="river.html">RIVER</a>
+                    <a href="<?php echo URLROOT; ?>river">RIVER</a>
                     <?php
                     if (isset($_SESSION['logged_in'])) {
                         if(strcmp($_SESSION['logged_in'], 'yes') == 0){

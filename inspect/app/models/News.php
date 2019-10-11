@@ -58,4 +58,30 @@ class News{
 
         return $database->resultSet();
     }
+
+    public static function getRiverNews(){
+        $data = [];
+        $news = [];
+        $database = new Database;
+
+        $database->query('select created_at from news group by created_at order by created_at desc limit 30');
+
+        //this has all dates from today to last 30 days
+        $dates = $database->resultSet();
+        // print_r($dates);
+        // die();
+        foreach($dates as $date){
+            $database = new Database;
+
+            $database->query('select * from news where sponsored = 0 order by created_at desc');
+            $news = $database->resultSet();
+        }
+
+        $data = [
+            'dates' => $dates,
+            'news' => $news
+        ];
+
+        return $data;
+    }
 }
