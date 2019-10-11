@@ -2,6 +2,7 @@
 
 require_once(APPROOT .'\models\Category.php');
 require_once(APPROOT .'\models\News.php');
+require_once(APPROOT .'\models\User.php');
 
 
   class Pages extends Controller {
@@ -10,7 +11,9 @@ require_once(APPROOT .'\models\News.php');
     }
     
     public function index(){
-
+      if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+      }
 
       $data = [
         'title' => 'Inspect',
@@ -18,6 +21,7 @@ require_once(APPROOT .'\models\News.php');
         'top_news' => News::getTopNews(),
         'sponsored_news'=> News::getSponsoredNews(),
         'current_news' => News::getCurrentNews(),
+        'user_image' => User::getUserImage($_SESSION['user_id']),
         'error' => ''
       ];
      

@@ -19,14 +19,14 @@
                             placeholder="Enter email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required>
+                        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required minlength="8">
                     </div>
-                    <p><?php if($data['error']){
+                    <p style="font-family: 'Playfair Display', serif; color: white"><?php if($data['error']){
                         echo $data['error'];
                     }else{
                         echo '';
                     } ?></p>
-                    <button type="submit" class="btn">Register</button><span><a class="cool-link" href="#">Have an
+                    <button type="submit" class="btn">Register</button><span><a class="cool-link" href="<?php echo URLROOT; ?>pages/signIn">Have an
                             acount? Sign in</a></span>
                 </form>
             </div>
@@ -35,17 +35,6 @@
                     By Signing Up, Get Access To
 
                 </h2>
-                <div class="card mt-3" style="width: 100%;">
-                    <div class="card-body">
-                        <h5 class="card-title mb-4">Create your company's own event.</h5>
-                        <p>
-                            This feature will help you to grow a complete network around the people who are in same
-                            business like you.
-                            let people invite at your event and let them know what your coompany is up to. Share and
-                            gather knowledge together.
-                        </p>
-                    </div>
-                </div>
                 <div class="card mt-3" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title">Get Hired !!</h5>

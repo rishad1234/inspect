@@ -52,7 +52,6 @@ if (session_status() == PHP_SESSION_NONE) {
                 if (isset($_SESSION['logged_in'])) {
                     if(strcmp($_SESSION['logged_in'], 'yes') == 0) {
                         ?>
-                            <span><a href="user_profile.html"><img class="userProfile mr-2" src="<?php echo URLROOT;?>images/editor-3.jpg" alt=""></a></span>
                             <span><button type="button" class="btn btn-outline-dark signlink"><a class=""
                                         href="<?php echo URLROOT; ?>Logout">Log out</a></button></span>
                         <?php
@@ -90,10 +89,9 @@ if (session_status() == PHP_SESSION_NONE) {
                         if(strcmp($_SESSION['logged_in'], 'yes') == 0){
                     ?>
 
-                    <a href="events.html">EVENTS</a>
                     <a href="<?php echo URLROOT; ?>documentaries">DOCUMENTARIES</a>
                     <a href="<?php echo URLROOT; ?>getHired">GET HIRED</a>
-
+                    <a href="<?php echo URLROOT; ?>userProfile">PROFILE</a>
                         <?php
                         } 
                     }?>

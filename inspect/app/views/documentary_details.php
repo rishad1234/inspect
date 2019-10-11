@@ -10,7 +10,7 @@
                     <div class="col-md-12 ">
                         <a href="#">
                             <video id="hero-video" width="100%" controls>
-                                <source src="<?php echo URLROOT; ?>storage/<?php echo $data['documentary']['documentary_video']; ?>" type="video/mp4">
+                                <source src="<?php echo URLROOT; ?>storage/videos/<?php echo $data['documentary']['documentary_video']; ?>" type="video/mp4">
                             </video>
                             <div class="video_wrapper">
                                 <div class="watchnow">

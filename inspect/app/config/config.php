@@ -7,6 +7,8 @@
 
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
+
+  define('PROJECTROOT', dirname(dirname(dirname(__FILE__))));
   // URL Root
   define('URLROOT', 'http://localhost/inspect/');
   // Site Name

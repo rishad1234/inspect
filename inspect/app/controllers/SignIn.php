@@ -24,6 +24,7 @@ require_once(APPROOT .'\models\User.php');
         $_SESSION['email']   =  $user[0]['email'];
         $_SESSION['organization']   =  $user[0]['organization'];
         $_SESSION['logged_in'] = 'yes';
+        $_SESSION['password'] = trim($_POST['password'], ' ');
 
         $data = [
           'title' => 'Inspect',
@@ -35,8 +36,7 @@ require_once(APPROOT .'\models\User.php');
           'title' => 'Sign In',
           'error' => 'wrong username or password'
         ];
-        //return $this->view('sign_in', $data);
-        header("Location: " . URLROOT . 'SignIn');
+        return $this->view('sign_in', $data);
       }
     }
   }

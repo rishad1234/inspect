@@ -18,9 +18,9 @@
                             placeholder="Enter email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required>
+                        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required minlength="8">
                     </div>
-                    <p><?php if($data['error']){
+                    <p style="font-family: 'Playfair Display', serif; color: white"><?php if($data['error']){
                         echo $data['error'];
                     }else{
                         echo '';
