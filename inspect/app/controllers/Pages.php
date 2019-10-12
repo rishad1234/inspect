@@ -28,19 +28,36 @@ require_once(APPROOT .'\models\User.php');
     }
 
     public function signUp(){
-      $data = [
-        'title' => 'Sign Up',
-        'error' => ''
-      ];
-      $this->view('sign_up', $data);
+      if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+      }
+
+      if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'yes'){
+        return $this->view('custom404', []);
+      }else{
+        $data = [
+          'title' => 'Sign Up',
+          'error' => ''
+        ];
+        $this->view('sign_up', $data);
+      }
+
     }
 
     public function signIn(){
-      $data = [
-        'title' => 'Sign In',
-        'error' => ''
-      ];
-      $this->view('sign_in', $data);
+      if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+      }
+
+      if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'yes'){
+        return $this->view('custom404', []);
+      }else{
+        $data = [
+          'title' => 'Sign In',
+          'error' => ''
+        ];
+        $this->view('sign_in', $data);
+      }
     }
 
     public function notFound(){

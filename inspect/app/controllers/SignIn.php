@@ -10,6 +10,11 @@ require_once(APPROOT .'\models\User.php');
     }
     
     public function index(){
+
+      if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+      }
+
       $email = CleanParams::clean('email', $_POST['email']);
       $password = trim($_POST['password'], ' ');
 
@@ -37,6 +42,7 @@ require_once(APPROOT .'\models\User.php');
           'error' => 'wrong username or password'
         ];
         return $this->view('sign_in', $data);
+      
       }
     }
   }
