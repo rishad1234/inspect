@@ -13,7 +13,7 @@ require_once(APPROOT .'\models\Documentary.php');
     
     public function index($param){
         session_start();
-        if($_SESSION['logged_in'] == 'yes'){
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'yes'){
 
             $simillar_documentaries = array_chunk(Documentary::getSimillarDocumentaries($param), 2);
 
@@ -27,7 +27,7 @@ require_once(APPROOT .'\models\Documentary.php');
             ];
             return $this->view('documentary_details', $data);
         }else{
-            echo "not found";
+            return $this->view('custom404', []);
         }
     }
   }

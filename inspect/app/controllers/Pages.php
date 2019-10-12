@@ -21,7 +21,6 @@ require_once(APPROOT .'\models\User.php');
         'top_news' => News::getTopNews(),
         'sponsored_news'=> News::getSponsoredNews(),
         'current_news' => News::getCurrentNews(),
-        'user_image' => User::getUserImage($_SESSION['user_id']),
         'error' => ''
       ];
      
@@ -42,5 +41,9 @@ require_once(APPROOT .'\models\User.php');
         'error' => ''
       ];
       $this->view('sign_in', $data);
+    }
+
+    public function notFound(){
+      $this->view('custom404', []);
     }
   }

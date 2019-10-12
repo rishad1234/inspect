@@ -13,7 +13,7 @@ require_once(APPROOT .'\models\Documentary.php');
     public function index(){
       session_start();
 
-      if($_SESSION['logged_in'] == 'yes'){
+      if( isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'yes'){
 
         $documentaries = array_chunk(Documentary::getAllDocumentaries(), 2);
         $data=[
@@ -25,7 +25,7 @@ require_once(APPROOT .'\models\Documentary.php');
           return $this->view('documentaries', $data);
       }else{
         // header('Location: ' . URLROOT);
-        echo "not found";
+        return $this->view('custom404', []);
       }
     }
   }

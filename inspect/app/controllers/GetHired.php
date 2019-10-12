@@ -12,7 +12,7 @@ require_once(APPROOT .'\models\Job.php');
     
     public function index(){
         session_start();
-        if($_SESSION['logged_in'] == 'yes'){
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'yes'){
             $data = [
                 'title' => "Get Hired",
                 'sponsored_news'=> News::getSponsoredNews(),
@@ -21,7 +21,7 @@ require_once(APPROOT .'\models\Job.php');
             ];
             return $this->view('get_hired', $data);
         }else{
-            echo "not found";
+            return $this->view('custom404', []);
         }
     }
   }

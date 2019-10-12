@@ -38,7 +38,7 @@ require_once(APPROOT .'\models\User.php');
     public function saveUser(){
         session_start();
 
-        if($_SESSION['logged_in'] == 'yes'){
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 'yes'){
 
             $user_data=[
                 'full_name' => CleanParams::clean('text', $_POST['full_name']),
@@ -63,7 +63,7 @@ require_once(APPROOT .'\models\User.php');
             header("Location: " . URLROOT . 'userProfile');
             
         }else{
-            echo 'not found';
+            return $this->view('custom404', []);
         }
     }
   }
