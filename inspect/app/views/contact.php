@@ -29,20 +29,20 @@
                 <h3 class="news_heading">
                     Contact Us In Social Media
                 </h3>
-                <div class="row mt-5">
-                    <div class="col-md-4">
+                <div class="row mt-5 mb-3">
+                    <div class="col-md-4 mt-2">
                         <div class="eachCategories">
                             <a href="#">Facebook</a>
 
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-2">
                         <div class="eachCategories">
                             <a href="#">Instagram</a>
 
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-2">
                         <div class="eachCategories">
                             <a href="#">Twitter</a>
 

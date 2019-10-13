@@ -3,7 +3,7 @@
 <div class="container section_space">
         <div class="row">
             <div class="col-md-7">
-                <h2 class="news_heading">
+                <h2 class="news_heading mb-4">
                     Documentaries
                 </h2>
 
@@ -14,7 +14,7 @@
                         foreach($documentary_chunk as $documentary){
                         ?>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <div class="card" style="width: 100%;">
                                     <a href="<?php echo URLROOT; ?>SingleDocumentary/<?php echo $documentary['documentary_id'];?>">
                                         <img src="<?php echo URLROOT; ?>storage/images/<?php echo $documentary['thumbnail_image']; ?>" class="card-img-top" alt="...">
@@ -40,7 +40,6 @@
 
                 } ?>
             </div>
-
 
 
             <div class="col-md-5">

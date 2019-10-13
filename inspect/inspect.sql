@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2019 at 05:11 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: Oct 12, 2019 at 07:26 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -42,7 +42,8 @@ CREATE TABLE `contacts` (
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `message`, `created_at`) VALUES
 (1, 'Rishadul Islam', 'rishadulislam@outlook.com', 'vghuujhbhuyguy', '2019-10-03'),
-(2, 'Rishadul Islam', 'rishadulislam@outlook.com', 'adfagfshrtyrrewrtyeew', '2019-10-03');
+(2, 'Rishadul Islam', 'rishadulislam@outlook.com', 'adfagfshrtyrrewrtyeew', '2019-10-03'),
+(3, 'Shafayet Ul Islam', 'shafayet@gmail.com', 'Hello Again', '2019-10-12');
 
 -- --------------------------------------------------------
 
@@ -140,7 +141,7 @@ INSERT INTO `news_categories` (`category_id`, `category`) VALUES
 (1, 'OS Talk'),
 (2, 'Hardware'),
 (3, 'Software'),
-(4, 'Cloud Platform'),
+(4, 'Cloud'),
 (5, 'Skills'),
 (6, 'Big 4');
 
@@ -168,7 +169,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `email`, `password`, `organization`, `age`, `address`, `phone_number`, `gender`, `user_image`, `full_name`) VALUES
-(10, 'rishadulislam@outlook.com', '15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225', 'exosmic', 23, '105/B, west monipur, mirpur, Dhaka', '01780238213', 'M', '10exosmic.JPG', 'Rishadul Islam');
+(10, 'rishadulislam@outlook.com', '15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225', 'exosmic', 23, '105/B, west monipur, mirpur, Dhaka', '01780238213', 'M', '10exosmic.JPG', 'Rishadul Islam'),
+(11, 'shafayet@gmail.com', 'ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f', 'Symbl', 0, '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -218,7 +220,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `documentaries`
@@ -248,7 +250,7 @@ ALTER TABLE `news_categories`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

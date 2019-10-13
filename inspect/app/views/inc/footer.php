@@ -41,11 +41,11 @@
         $(".signuppage").css("height", $(window).height() - $("#header").height() - 100);
         $(".signuppage").css("height", $(window).height() - $("#header").height() - 100);
         
-        $(".play_vid").click(function () {
-            let vid = document.getElementById("hero-video");
-            vid.play();
-            $(".video_wrapper").css("display", "none");
-        });
+        // $(".play_vid").click(function () {
+        //     let vid = document.getElementById("hero-video");
+        //     vid.play();
+        //     $(".video_wrapper").css("display", "none");
+        // });
     </script>
 </body>
 

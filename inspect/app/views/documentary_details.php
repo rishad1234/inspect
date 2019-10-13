@@ -13,9 +13,9 @@
                                 <source src="<?php echo URLROOT; ?>storage/videos/<?php echo $data['documentary']['documentary_video']; ?>" type="video/mp4">
                             </video>
                             <div class="video_wrapper">
-                                <div class="watchnow">
+                                <!-- <div class="watchnow">
                                     <i class="far fa-play-circle play_vid"></i>
-                                </div>
+                                </div> -->
                             </div>
                         </a>
                     </div>
@@ -30,7 +30,7 @@
                     <?php
                         foreach($similar_documentaries_chunk as $documentary){
                             ?>
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-2">
                                     <div class="card" style="width: 100%;">
                                         <a href="<?php echo URLROOT; ?>SingleDocumentary/<?php echo $documentary['documentary_id'];?>">
                                             <img src="<?php echo URLROOT; ?>storage/images/<?php echo $documentary['thumbnail_image']; ?>" class="card-img-top" alt="...">

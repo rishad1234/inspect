@@ -2,7 +2,7 @@
 <?php echo $data['error']; ?>
 <div class="container section_space">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="news_state">
                     <h3>Available Feature for you</h3>
                 </div>
@@ -36,7 +36,7 @@
 
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8">
 
                 <form class="mt-5 profileInfo" method="post" action="<?php echo URLROOT; ?>userProfile/saveUser" enctype="multipart/form-data">
                     <div class="news_state">

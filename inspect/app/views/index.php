@@ -16,7 +16,23 @@
             foreach($data['news_categories'] as $category){
                 ?>
                     <div class="col-md-2">
-                        <div class="eachCategories">
+                        
+                            <a class="eachCategories" href="<?php echo URLROOT; ?>CategoryType/<?php echo $category['category_id']; ?>"><?php echo $category['category']; ?></a>
+                        
+                    </div>
+                <?php
+            }
+        ?>
+        </div>
+    </div>
+
+    <div style="font-size:12px" class="container section_space d-block d-sm-block d-md-none">
+        <div class="row">
+        <?php 
+            foreach($data['news_categories'] as $category){
+                ?>
+                    <div class="col-md-2">
+                        <div class="eachCategories mt-2">
                             <a href="<?php echo URLROOT; ?>CategoryType/<?php echo $category['category_id']; ?>"><?php echo $category['category']; ?></a>
                         </div>
                     </div>

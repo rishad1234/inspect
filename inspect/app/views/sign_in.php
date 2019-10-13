@@ -7,7 +7,7 @@
                 <h1 style="font-family: 'Playfair Display', serif; color: white" class="text-center mt-5">
                     <strong>JOIN INSPECT</strong>
                 </h1>
-                <p style="color: white; font-family: 'Lato', sans-serif;" class="text-center mt-4">
+                <p style="color: white; font-family: 'Lato', sans-serif;" class="text-center mt-4 d-none">
                     Share your ideas, Read blogs, Follow what other companies <br> are are offering
                     and generate value for your own work place. <br> A wonderful place to gather knowledge.
                 </p>

@@ -1,34 +1,28 @@
 <?php require_once('inc/header.php');?>
-
 <div class="container section_space">
         <div class="row">
             <div class="col-md-6 about-inspect">
                 <h1 style="display: inline-block; border-bottom:2px solid #1e1d1d">About Inspect</h1>
                 <br><br>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum amet iure delectus, sequi tempora
-                    quia accusantium maiores, dolorem laudantium, neque eveniet repudiandae eum. Accusamus similique ut
-                    eius vero amet incidunt voluptates totam, harum, nesciunt, dolorum odit atque quo officia aut dolor
-                    hic iste nemo commodi deleniti. Obcaecati debitis quisquam incidunt aperiam magnam quis aspernatur
-                    deserunt tempora nulla repellat omnis reprehenderit harum itaque ipsam dicta rerum praesentium saepe
-                    optio dolorem culpa, quam necessitatibus eius esse labore. Atque amet incidunt officia eius illo
-                    quia neque quibusdam ipsa porro aut?
-
-                    <br><br>
-
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum amet iure delectus, sequi tempora
-                    quia accusantium maiores, dolorem laudantium, neque eveniet repudiandae eum. Accusamus similique ut
-                    eius vero amet incidunt voluptates totam, harum, nesciunt, dolorum odit atque quo officia aut dolor
-                    hic iste nemo commodi deleniti. Obcaecati debitis quisquam incidunt aperiam magnam quis aspernatur
-                    deserunt tempora nulla repellat omnis reprehenderit harum itaque ipsam dicta rerum praesentium saepe
-                    optio dolorem culpa, quam necessitatibus eius esse labore. Atque amet incidunt officia eius illo
-                    quia neque quibusdam ipsa porro aut?
-                </p>
+                    <?php echo $data['about_p']['content']; ?>
                 <div class="co-founders section_space">
                     <h1 style="display: inline-block; border-bottom:2px solid #1e1d1d">Co-founders</h1>
                 </div>
                 <div class="row section_space">
+
+                <?php foreach($data['co_founders'] as $co_founders){
+                    ?>
                     <div class="col-md-6">
+                        <img class="shafayet" src="<?php echo URLROOT; ?>storage/co_founders/<?php echo $co_founders['image']; ?>" alt="">
+
+                        <p style="margin-top:10px;">
+                            <?php echo $co_founders['co_founder_name'] ?> <br>
+                            <b>Co-founder</b><br>
+                        </p>
+                    </div>
+                    <?php
+                } ?>
+                    <!-- <div class="col-md-6">
                         <img class="shafayet" src="images/img-1.jpg" alt="">
 
                         <p style="margin-top:10px;">
@@ -43,7 +37,7 @@
                             Rishadul Islam Khan <br>
                             <b>Co-founder</b><br>
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-6">
@@ -51,7 +45,26 @@
                 <br><br>
                 <div class="editor-panel">
                     <div class="row">
-                        <div class="col-sm-4 ">
+                        <?php foreach($data['editor'] as $editor_chunk){
+                            ?>
+                            <div class="col-sm-4 ">
+                            <?php
+                            foreach($editor_chunk as $editor){
+                                ?>
+                                    
+                                        <div class="editor-images">
+                                            <img src="<?php echo URLROOT; ?>storage/editor/<?php echo $editor['image']; ?>" alt="">
+                                            <p style="margin-top:10px;">
+                                                <?php echo $editor['editor_name']; ?> <br>
+                                            </p>
+                                        </div>
+                                <?php
+                            }
+                            ?>
+                            </div>
+                            <?php
+                        } ?>
+                        <!-- <div class="col-sm-4 ">
                             <div class="editor-images">
                                 <img src="images/editor-1.jpg" alt="">
                                 <p style="margin-top:10px;">
@@ -110,7 +123,7 @@
                                     Gordon <br>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
